@@ -1,0 +1,810 @@
+
+****** vitis-run v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-08:29:27
+  **** Start of session at: Thu May  7 06:58:15 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script 'D:/Thesis/workspaces/HLS01/scripts/run_resblock2_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project resblock2_hls_prj 
+WARNING: [HLS 200-2182] The 'resblock2_hls_prj' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Creating and opening solution 'D:/Thesis/workspaces/HLS01/resblock2_hls_prj'.
+INFO: [HLS 200-1510] Running: set_top resblock2_hls 
+INFO: [HLS 200-1510] Running: add_files src/hls_quant.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/hls_quant.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/conv1d_res2_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/conv1d_res2_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/relu_res2_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/relu_res2_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/add_res2_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/add_res2_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/resblock2_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/resblock2_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb/test_resblock2_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding test bench file 'tb/test_resblock2_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Creating and opening solution 'D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../tb/test_resblock2_hls.cpp in debug mode
+   Compiling ../../../../src/resblock2_hls.cpp in debug mode
+   Compiling ../../../../src/add_res2_hls.cpp in debug mode
+   Compiling ../../../../src/relu_res2_hls.cpp in debug mode
+   Compiling ../../../../src/conv1d_res2_hls.cpp in debug mode
+   Compiling ../../../../src/hls_quant.cpp in debug mode
+   Generating csim.exe
+========================================
+Running RESBLOCK2 HLS synthetic test
+RES2_IN_SIZE  = 5120
+RES2_OUT_SIZE = 5120
+RES2_W_SIZE   = 20480
+========================================
+RESBLOCK2 HLS synthetic PASS
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:03; Allocated memory: 0.594 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.746 seconds; current allocated memory: 140.480 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'src/resblock2_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/add_res2_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/relu_res2_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/conv1d_res2_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hls_quant.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.341 seconds; current allocated memory: 143.199 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 392 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 14,726 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 10,742 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 9,415 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 9,406 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 9,406 instructions in the design after the 'Array/Struct' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 9,406 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 9,406 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 9,406 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 9,406 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 9,406 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 9,406 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 12,523 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 11,245 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 11,285 instructions in the design after the 'HW Transforms' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 11,312 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_23_3' is marked as complete unroll implied by the pipeline pragma (src/conv1d_res2_hls.cpp:23:30)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_24_4' is marked as complete unroll implied by the pipeline pragma (src/conv1d_res2_hls.cpp:24:34)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_23_3' (src/conv1d_res2_hls.cpp:23:30) in function 'res2_conv1d_hls' completely with a factor of 64 (src/conv1d_res2_hls.cpp:16:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_24_4' (src/conv1d_res2_hls.cpp:24:34) in function 'res2_conv1d_hls' completely with a factor of 5 (src/conv1d_res2_hls.cpp:16:0)
+INFO: [HLS 214-178] Inlining function 'requantize_to_int32(int, int, int)' into 'requantize_to_u8(int, int, int, int)' (src/hls_quant.cpp:35:0)
+INFO: [HLS 214-178] Inlining function 'clamp_u8(int)' into 'requantize_to_u8(int, int, int, int)' (src/hls_quant.cpp:35:0)
+INFO: [HLS 214-178] Inlining function 'requantize_to_u8(int, int, int, int)' into 'res2_conv1d_hls(unsigned char const*, signed char const*, int const*, unsigned char*, int const*, int const*, int const*, int, int)' (src/conv1d_res2_hls.cpp:16:0)
+INFO: [HLS 214-178] Inlining function 'requantize_to_int32(int, int, int)' into 'add_res2_hls(unsigned char const*, unsigned char const*, unsigned char*, int, int, int, int, int, int, int)' (src/add_res2_hls.cpp:18:0)
+INFO: [HLS 214-178] Inlining function 'clamp_u8(int)' into 'add_res2_hls(unsigned char const*, unsigned char const*, unsigned char*, int, int, int, int, int, int, int)' (src/add_res2_hls.cpp:18:0)
+INFO: [HLS 214-178] Inlining function 'res2_relu_hls(unsigned char const*, unsigned char*, int)' into 'resblock2_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int, int, int, int, int, int, int)' (src/resblock2_hls.cpp:34:0)
+INFO: [HLS 214-178] Inlining function 'add_res2_hls(unsigned char const*, unsigned char const*, unsigned char*, int, int, int, int, int, int, int)' into 'resblock2_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int, int, int, int, int, int, int)' (src/resblock2_hls.cpp:34:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'resblock2_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int, int, int, int, int, int, int)::relu1_out' due to pipeline pragma (src/conv1d_res2_hls.cpp:19:1)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ13resblock2_hlsPKhPKaPKiS4_S4_S4_S2_S4_S4_S4_S4_PhiiiiiiiiE9relu1_out': Cyclic partitioning with factor 3 on dimension 1. (src/resblock2_hls.cpp:36:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 101.046 seconds; current allocated memory: 144.348 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.005 seconds; current allocated memory: 144.348 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.889 seconds; current allocated memory: 148.652 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.024 seconds; current allocated memory: 159.367 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/add_res2_hls.cpp:20:1) to (src/add_res2_hls.cpp:19:22) in function 'resblock2_hls'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/conv1d_res2_hls.cpp:19:1) to (src/conv1d_res2_hls.cpp:18:26) in function 'res2_conv1d_hls.1'... converting 515 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/conv1d_res2_hls.cpp:19:1) to (src/conv1d_res2_hls.cpp:18:26) in function 'res2_conv1d_hls'... converting 515 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'res2_conv1d_hls.1' (src/conv1d_res2_hls.cpp:14:30)...320 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'res2_conv1d_hls' (src/conv1d_res2_hls.cpp:14:30)...320 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 15 seconds. CPU system time: 0 seconds. Elapsed time: 16.904 seconds; current allocated memory: 178.953 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_17_1'(src/conv1d_res2_hls.cpp:17:22) and 'VITIS_LOOP_18_2'(src/conv1d_res2_hls.cpp:18:26) in function 'res2_conv1d_hls.1' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_17_1'(src/conv1d_res2_hls.cpp:17:22) and 'VITIS_LOOP_18_2'(src/conv1d_res2_hls.cpp:18:26) in function 'res2_conv1d_hls' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_17_1' (src/conv1d_res2_hls.cpp:17:22) in function 'res2_conv1d_hls.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_17_1' (src/conv1d_res2_hls.cpp:17:22) in function 'res2_conv1d_hls'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 10 seconds. CPU system time: 0 seconds. Elapsed time: 10.157 seconds; current allocated memory: 178.953 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'resblock2_hls' ...
+WARNING: [SYN 201-103] Legalizing function name 'res2_conv1d_hls.1' to 'res2_conv1d_hls_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'res2_conv1d_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_17_1_VITIS_LOOP_18_2'.
+WARNING: [HLS 200-448] Lower bound of II is 160 due to multiple 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_res2_hls.cpp:33) on array 'input_r' accessing core:RAM:input_r
+WARNING: [HLS 200-448] Lower bound of II is 160 due to multiple 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight1' accessing core:RAM:weight1
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 160, Depth = 172, loop 'VITIS_LOOP_17_1_VITIS_LOOP_18_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 15 seconds. CPU system time: 0 seconds. Elapsed time: 19.672 seconds; current allocated memory: 184.027 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 6 seconds. CPU system time: 0 seconds. Elapsed time: 6.73 seconds; current allocated memory: 185.496 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'resblock2_hls_Pipeline_VITIS_LOOP_8_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_8_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.23 seconds; current allocated memory: 187.242 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.048 seconds; current allocated memory: 187.246 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'res2_conv1d_hls_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_169) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_168) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_167) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_166) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_82) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_81) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_80) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_36) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_17_1_VITIS_LOOP_18_2'.
+WARNING: [HLS 200-448] Lower bound of II is 160 due to multiple 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'weight2' accessing core:RAM:weight2
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 160, Depth = 268, loop 'VITIS_LOOP_17_1_VITIS_LOOP_18_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 81 seconds. CPU system time: 0 seconds. Elapsed time: 86.658 seconds; current allocated memory: 255.594 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 6 seconds. CPU system time: 0 seconds. Elapsed time: 6.556 seconds; current allocated memory: 255.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'resblock2_hls_Pipeline_VITIS_LOOP_19_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_19_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'VITIS_LOOP_19_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.951 seconds; current allocated memory: 255.594 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 255.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'resblock2_hls_Pipeline_VITIS_LOOP_8_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_8_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.047 seconds; current allocated memory: 255.594 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.029 seconds; current allocated memory: 255.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'resblock2_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 255.594 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.206 seconds; current allocated memory: 255.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'res2_conv1d_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'res2_conv1d_hls' pipeline 'VITIS_LOOP_17_1_VITIS_LOOP_18_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'res2_conv1d_hls'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 4.664 seconds; current allocated memory: 277.715 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'resblock2_hls_Pipeline_VITIS_LOOP_8_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'resblock2_hls_Pipeline_VITIS_LOOP_8_1' pipeline 'VITIS_LOOP_8_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'resblock2_hls_Pipeline_VITIS_LOOP_8_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4 seconds. CPU system time: 2 seconds. Elapsed time: 6.808 seconds; current allocated memory: 375.566 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'res2_conv1d_hls_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'res2_conv1d_hls_1' pipeline 'VITIS_LOOP_17_1_VITIS_LOOP_18_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_7ns_10ns_12ns_23_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_7ns_11ns_13ns_25_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_7ns_12ns_14ns_27_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_7ns_7ns_9ns_17_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_7ns_8ns_10ns_19_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_7ns_9ns_11ns_21_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_10ns_12ns_21_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_11ns_13ns_23_1_1': 40 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12ns_14ns_25_1_1': 83 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_13ns_15ns_27_1_1': 40 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_129_5_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_9ns_15_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_9ns_11ns_19_1_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_8_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_7ns_3ns_2_11_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'res2_conv1d_hls_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 9 seconds. CPU system time: 0 seconds. Elapsed time: 10.454 seconds; current allocated memory: 405.523 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'resblock2_hls_Pipeline_VITIS_LOOP_19_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'resblock2_hls_Pipeline_VITIS_LOOP_19_1' pipeline 'VITIS_LOOP_19_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_64_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'resblock2_hls_Pipeline_VITIS_LOOP_19_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 7 seconds. CPU system time: 3 seconds. Elapsed time: 14.996 seconds; current allocated memory: 556.059 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'resblock2_hls_Pipeline_VITIS_LOOP_8_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'resblock2_hls_Pipeline_VITIS_LOOP_8_11' pipeline 'VITIS_LOOP_8_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'resblock2_hls_Pipeline_VITIS_LOOP_8_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.543 seconds; current allocated memory: 556.059 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'resblock2_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/weight1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/bias1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/mult1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/shift1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/weight_zp1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/weight2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/bias2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/mult2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/shift2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/weight_zp2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/add_mult_a' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/add_shift_a' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/add_za' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/add_mult_b' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/add_shift_b' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/add_zb' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/Zx' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'resblock2_hls/Zy' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'resblock2_hls' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'resblock2_hls_unsigned_char_const_signed_char_const_int_const_int_const_2_RAM_1P_BRAM_1R1W' to 'resblock2_hls_unsigned_char_const_signed_char_const_int_const_int_const_2_RAMbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'resblock2_hls_unsigned_char_const_signed_char_const_int_const_int_const_1_RAM_1P_BRAM_1R1W' to 'resblock2_hls_unsigned_char_const_signed_char_const_int_const_int_const_1_RAMcud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'resblock2_mulmulmulmulhls_unsigned_char_const_signed_char_const_int_const_int_const_RAM_1P_BRAM_1R1W' to 'resblock2_mulmulmulmulhls_unsigned_char_const_signed_char_const_int_const_intdEe' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'resblock2_hls'.
+INFO: [RTMG 210-278] Implementing memory 'resblock2_hls_conv1_out_RAM_1P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'resblock2_hls_resblock2_hls_unsigned_char_const_signed_char_const_int_const_int_const_2_RAMbkb' using block RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.711 seconds; current allocated memory: 556.059 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 6.818 seconds; current allocated memory: 556.059 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 6.795 seconds; current allocated memory: 556.059 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for resblock2_hls.
+INFO: [VLOG 209-307] Generating Verilog RTL for resblock2_hls.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 111.76 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:05:18; Allocated memory: 416.070 MB.
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "D:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang++"
+   Compiling add_res2_hls.cpp_pre.cpp.tb.cpp
+   Compiling apatb_resblock2_hls.cpp
+   Compiling conv1d_res2_hls.cpp_pre.cpp.tb.cpp
+   Compiling hls_quant.cpp_pre.cpp.tb.cpp
+   Compiling relu_res2_hls.cpp_pre.cpp.tb.cpp
+   Compiling resblock2_hls.cpp_pre.cpp.tb.cpp
+   Compiling test_resblock2_hls.cpp_pre.cpp.tb.cpp
+   Compiling apatb_resblock2_hls_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+========================================
+Running RESBLOCK2 HLS synthetic test
+RES2_IN_SIZE  = 5120
+RES2_OUT_SIZE = 5120
+RES2_W_SIZE   = 20480
+========================================
+RESBLOCK2 HLS synthetic PASS
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged writeonly
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+D:\Thesis\workspaces\HLS01\resblock2_hls_prj\solution1\sim\verilog>set PATH= 
+
+D:\Thesis\workspaces\HLS01\resblock2_hls_prj\solution1\sim\verilog>call D:/AMDDesignTools/2025.2/Vivado/bin/xelab xil_defaultlib.apatb_resblock2_hls_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj resblock2_hls.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_21 -L floating_point_v7_0_26 --lib "ieee_proposed=./ieee_proposed" -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./resblock2_hls_subsystem  -s resblock2_hls  
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_resblock2_hls_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj resblock2_hls.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_21 -L floating_point_v7_0_26 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./resblock2_hls_subsystem -s resblock2_hls 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/AESL_automem_bias1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_bias1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/AESL_automem_bias2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_bias2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/AESL_automem_input_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/AESL_automem_mult1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_mult1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/AESL_automem_mult2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_mult2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/AESL_automem_output_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_output_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/AESL_automem_shift1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_shift1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/AESL_automem_shift2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_shift2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/AESL_automem_weight1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_weight1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/AESL_automem_weight2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_weight2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/AESL_automem_weight_zp1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_weight_zp1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/AESL_automem_weight_zp2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_weight_zp2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_resblock2_hls_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_am_addmul_7ns_10ns_12ns_23_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_am_addmul_7ns_10ns_12ns_23_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module resblock2_hls_am_addmul_7ns_10ns_12ns_23_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_am_addmul_7ns_11ns_13ns_25_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_am_addmul_7ns_11ns_13ns_25_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module resblock2_hls_am_addmul_7ns_11ns_13ns_25_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_am_addmul_7ns_12ns_14ns_27_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_am_addmul_7ns_12ns_14ns_27_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module resblock2_hls_am_addmul_7ns_12ns_14ns_27_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_am_addmul_7ns_7ns_9ns_17_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_am_addmul_7ns_7ns_9ns_17_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module resblock2_hls_am_addmul_7ns_7ns_9ns_17_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_am_addmul_7ns_8ns_10ns_19_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_am_addmul_7ns_8ns_10ns_19_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module resblock2_hls_am_addmul_7ns_8ns_10ns_19_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_am_addmul_7ns_9ns_11ns_21_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_am_addmul_7ns_9ns_11ns_21_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module resblock2_hls_am_addmul_7ns_9ns_11ns_21_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_conv1_out_RAM_1P_BRAM_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_conv1_out_RAM_1P_BRAM_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_mul_10ns_12ns_21_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_mul_10ns_12ns_21_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_mul_11ns_13ns_23_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_mul_11ns_13ns_23_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_mul_12ns_14ns_25_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_mul_12ns_14ns_25_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_mul_13ns_15ns_27_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_mul_13ns_15ns_27_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_mul_32s_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_mul_32s_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_mul_32s_32s_64_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_mul_32s_32s_64_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_mul_64ns_66ns_129_5_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_mul_64ns_66ns_129_5_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_mul_7ns_9ns_15_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_mul_7ns_9ns_15_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_mul_8ns_10ns_17_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_mul_8ns_10ns_17_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_mul_9ns_11ns_19_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_mul_9ns_11ns_19_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_res2_conv1d_hls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_res2_conv1d_hls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_res2_conv1d_hls_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_res2_conv1d_hls_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_resblock2_hls_Pipeline_VITIS_LOOP_19_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_resblock2_hls_Pipeline_VITIS_LOOP_19_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_resblock2_hls_Pipeline_VITIS_LOOP_8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_resblock2_hls_Pipeline_VITIS_LOOP_8_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_resblock2_hls_Pipeline_VITIS_LOOP_8_11.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_resblock2_hls_Pipeline_VITIS_LOOP_8_11
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_resblock2_hls_unsigned_char_const_signed_char_const_int_const_int_const_2_RAMbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_resblock2_hls_unsigned_char_const_signed_char_const_int_const_int_const_2_RAMbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_sparsemux_7_2_8_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_sparsemux_7_2_8_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_urem_7ns_3ns_2_11_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resblock2_hls_urem_7ns_3ns_2_11_1_divider
+INFO: [VRFC 10-311] analyzing module resblock2_hls_urem_7ns_3ns_2_11_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/svr/svr_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/svr/svr_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/resblock2_hls_subsystem/resblock2_hls_subsystem_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/svtb/misc_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/resblock2_hls_prj/solution1/sim/verilog/svtb/sv_module_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv_module_top
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.svr_pkg
+Compiling package xil_defaultlib.file_agent_pkg
+Compiling package xil_defaultlib.resblock2_hls_subsystem_pkg
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.resblock2_hls_conv1_out_RAM_1P_B...
+Compiling module xil_defaultlib.resblock2_hls_resblock2_hls_unsi...
+Compiling module xil_defaultlib.resblock2_hls_flow_control_loop_...
+Compiling module xil_defaultlib.resblock2_hls_res2_conv1d_hls
+Compiling module xil_defaultlib.resblock2_hls_resblock2_hls_Pipe...
+Compiling module xil_defaultlib.resblock2_hls_mul_32s_32s_32_2_1...
+Compiling module xil_defaultlib.resblock2_hls_mul_64ns_66ns_129_...
+Compiling module xil_defaultlib.resblock2_hls_sparsemux_7_2_8_1_...
+Compiling module xil_defaultlib.resblock2_hls_mul_7ns_9ns_15_1_1...
+Compiling module xil_defaultlib.resblock2_hls_urem_7ns_3ns_2_11_...
+Compiling module xil_defaultlib.resblock2_hls_urem_7ns_3ns_2_11_...
+Compiling module xil_defaultlib.resblock2_hls_mul_13ns_15ns_27_1...
+Compiling module xil_defaultlib.resblock2_hls_mul_11ns_13ns_23_1...
+Compiling module xil_defaultlib.resblock2_hls_mul_12ns_14ns_25_1...
+Compiling module xil_defaultlib.resblock2_hls_mul_10ns_12ns_21_1...
+Compiling module xil_defaultlib.resblock2_hls_mul_8ns_10ns_17_1_...
+Compiling module xil_defaultlib.resblock2_hls_mul_9ns_11ns_19_1_...
+Compiling module xil_defaultlib.resblock2_hls_am_addmul_7ns_12ns...
+Compiling module xil_defaultlib.resblock2_hls_am_addmul_7ns_12ns...
+Compiling module xil_defaultlib.resblock2_hls_am_addmul_7ns_8ns_...
+Compiling module xil_defaultlib.resblock2_hls_am_addmul_7ns_8ns_...
+Compiling module xil_defaultlib.resblock2_hls_am_addmul_7ns_10ns...
+Compiling module xil_defaultlib.resblock2_hls_am_addmul_7ns_10ns...
+Compiling module xil_defaultlib.resblock2_hls_am_addmul_7ns_11ns...
+Compiling module xil_defaultlib.resblock2_hls_am_addmul_7ns_11ns...
+Compiling module xil_defaultlib.resblock2_hls_am_addmul_7ns_7ns_...
+Compiling module xil_defaultlib.resblock2_hls_am_addmul_7ns_7ns_...
+Compiling module xil_defaultlib.resblock2_hls_am_addmul_7ns_9ns_...
+Compiling module xil_defaultlib.resblock2_hls_am_addmul_7ns_9ns_...
+Compiling module xil_defaultlib.resblock2_hls_res2_conv1d_hls_1
+Compiling module xil_defaultlib.resblock2_hls_mul_32s_32s_64_2_1...
+Compiling module xil_defaultlib.resblock2_hls_resblock2_hls_Pipe...
+Compiling module xil_defaultlib.resblock2_hls_resblock2_hls_Pipe...
+Compiling module xil_defaultlib.resblock2_hls
+Compiling module xil_defaultlib.misc_interface_default
+Compiling module xil_defaultlib.svr_if_default
+Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.AESL_automem_input_r
+Compiling module xil_defaultlib.AESL_automem_weight1
+Compiling module xil_defaultlib.AESL_automem_bias1
+Compiling module xil_defaultlib.AESL_automem_mult1
+Compiling module xil_defaultlib.AESL_automem_shift1
+Compiling module xil_defaultlib.AESL_automem_weight_zp1
+Compiling module xil_defaultlib.AESL_automem_weight2
+Compiling module xil_defaultlib.AESL_automem_bias2
+Compiling module xil_defaultlib.AESL_automem_mult2
+Compiling module xil_defaultlib.AESL_automem_shift2
+Compiling module xil_defaultlib.AESL_automem_weight_zp2
+Compiling module xil_defaultlib.AESL_automem_output_r
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=160)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_resblock2_hls_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot resblock2_hls
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu May  7 07:06:52 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/resblock2_hls/xsim_script.tcl
+# xsim {resblock2_hls} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=resblock2_hls_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -autoloadwcfg -tclbatch {resblock2_hls.tcl}
+Time resolution is 1 ps
+source resblock2_hls.tcl
+## run all
+UVM_INFO D:AMDDesignTooÿÿ‚5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO D:AMDDesignTooÿÿ‚5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO D:AMDDesignTooÿÿ‚5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+-------------------------------------------------------------------------------------------------
+Name                              Type                                     Size  Value           
+-------------------------------------------------------------------------------------------------
+uvm_test_top                      resblock2_hls_test_lib                   -     @355            
+  top_env                         resblock2_hls_env                        -     @366            
+    env_master_svr_Zx             uvm_env                                  -     @460            
+      m_agt                       uvm_agent                                -     @720            
+        drv                       uvm_driver #(REQ,RSP)                    -     @868            
+          rsp_port                uvm_analysis_port                        -     @887            
+          seq_item_port           uvm_seq_item_pull_port                   -     @877            
+        mon                       uvm_monitor                              -     @897            
+          item_collect_port       uvm_analysis_port                        -     @908            
+        sqr                       uvm_sequencer                            -     @731            
+          rsp_export              uvm_analysis_export                      -     @740            
+          seq_item_export         uvm_seq_item_pull_imp                    -     @858            
+          arbitration_queue       array                                    0     -               
+          lock_queue              array                                    0     -               
+          num_last_reqs           integral                                 32    'd1             
+          num_last_rsps           integral                                 32    'd1             
+    env_master_svr_Zy             uvm_env                                  -     @470            
+      m_agt                       uvm_agent                                -     @926            
+        drv                       uvm_driver #(REQ,RSP)                    -     @1074           
+          rsp_port                uvm_analysis_port                        -     @1093           
+          seq_item_port           uvm_seq_item_pull_port                   -     @1083           
+        mon                       uvm_monitor                              -     @1103           
+          item_collect_port       uvm_analysis_port                        -     @1114           
+        sqr                       uvm_sequencer                            -     @937            
+          rsp_export              uvm_analysis_export                      -     @946            
+          seq_item_export         uvm_seq_item_pull_imp                    -     @1064           
+          arbitration_queue       array                                    0     -               
+          lock_queue              array                                    0     -               
+          num_last_reqs           integral                                 32    'd1             
+          num_last_rsps           integral                                 32    'd1             
+    env_master_svr_add_mult_a     uvm_env                                  -     @397            
+      m_agt                       uvm_agent                                -     @1132           
+        drv                       uvm_driver #(REQ,RSP)                    -     @1280           
+          rsp_port                uvm_analysis_port                        -     @1299           
+          seq_item_port           uvm_seq_item_pull_port                   -     @1289           
+        mon                       uvm_monitor                              -     @1309           
+          item_collect_port       uvm_analysis_port                        -     @1320           
+        sqr                       uvm_sequencer                            -     @1143           
+          rsp_export              uvm_analysis_export                      -     @1152           
+          seq_item_export         uvm_seq_item_pull_imp                    -     @1270           
+          arbitration_queue       array                                    0     -               
+          lock_queue              array                                    0     -               
+          num_last_reqs           integral                                 32    'd1             
+          num_last_rsps           integral                                 32    'd1             
+    env_master_svr_add_mult_b     uvm_env                                  -     @430            
+      m_agt                       uvm_agent                                -     @1338           
+        drv                       uvm_driver #(REQ,RSP)                    -     @1486           
+          rsp_port                uvm_analysis_port                        -     @1505           
+          seq_item_port           uvm_seq_item_pull_port                   -     @1495           
+        mon                       uvm_monitor                              -     @1515           
+          item_collect_port       uvm_analysis_port                        -     @1526           
+        sqr                       uvm_sequencer                            -     @1349           
+          rsp_export              uvm_analysis_export                      -     @1358           
+          seq_item_export         uvm_seq_item_pull_imp                    -     @1476           
+          arbitration_queue       array                                    0     -               
+          lock_queue              array                                    0     -               
+          num_last_reqs           integral                                 32    'd1             
+          num_last_rsps           integral                                 32    'd1             
+    env_master_svr_add_shift_a    uvm_env                                  -     @410            
+      m_agt                       uvm_agent                                -     @1544           
+        drv                       uvm_driver #(REQ,RSP)                    -     @1692           
+          rsp_port                uvm_analysis_port                        -     @1711           
+          seq_item_port           uvm_seq_item_pull_port                   -     @1701           
+        mon                       uvm_monitor                              -     @1721           
+          item_collect_port       uvm_analysis_port                        -     @1732           
+        sqr                       uvm_sequencer                            -     @1555           
+          rsp_export              uvm_analysis_export                      -     @1564           
+          seq_item_export         uvm_seq_item_pull_imp                    -     @1682           
+          arbitration_queue       array                                    0     -               
+          lock_queue              array                                    0     -               
+          num_last_reqs           integral                                 32    'd1             
+          num_last_rsps           integral                                 32    'd1             
+    env_master_svr_add_shift_b    uvm_env                                  -     @440            
+      m_agt                       uvm_agent                                -     @1750           
+        drv                       uvm_driver #(REQ,RSP)                    -     @1898           
+          rsp_port                uvm_analysis_port                        -     @1917           
+          seq_item_port           uvm_seq_item_pull_port                   -     @1907           
+        mon                       uvm_monitor                              -     @1927           
+          item_collect_port       uvm_analysis_port                        -     @1938           
+        sqr                       uvm_sequencer                            -     @1761           
+          rsp_export              uvm_analysis_export                      -     @1770           
+          seq_item_export         uvm_seq_item_pull_imp                    -     @1888           
+          arbitration_queue       array                                    0     -               
+          lock_queue              array                                    0     -               
+          num_last_reqs           integral                                 32    'd1             
+          num_last_rsps           integral                                 32    'd1             
+    env_master_svr_add_za         uvm_env                                  -     @420            
+      m_agt                       uvm_agent                                -     @1956           
+        drv                       uvm_driver #(REQ,RSP)                    -     @2104           
+          rsp_port                uvm_analysis_port                        -     @2123           
+          seq_item_port           uvm_seq_item_pull_port                   -     @2113           
+        mon                       uvm_monitor                              -     @2133           
+          item_collect_port       uvm_analysis_port                        -     @2144           
+        sqr                       uvm_sequencer                            -     @1967           
+          rsp_export              uvm_analysis_export                      -     @1976           
+          seq_item_export         uvm_seq_item_pull_imp                    -     @2094           
+          arbitration_queue       array                                    0     -               
+          lock_queue              array                                    0     -               
+          num_last_reqs           integral                                 32    'd1             
+          num_last_rsps           integral                                 32    'd1             
+    env_master_svr_add_zb         uvm_env                                  -     @450            
+      m_agt                       uvm_agent                                -     @2162           
+        drv                       uvm_driver #(REQ,RSP)                    -     @2310           
+          rsp_port                uvm_analysis_port                        -     @2329           
+          seq_item_port           uvm_seq_item_pull_port                   -     @2319           
+        mon                       uvm_monitor                              -     @2339           
+          item_collect_port       uvm_analysis_port                        -     @2350           
+        sqr                       uvm_sequencer                            -     @2173           
+          rsp_export              uvm_analysis_export                      -     @2182           
+          seq_item_export         uvm_seq_item_pull_imp                    -     @2300           
+          arbitration_queue       array                                    0     -               
+          lock_queue              array                                    0     -               
+          num_last_reqs           integral                                 32    'd1             
+          num_last_rsps           integral                                 32    'd1             
+    refm                          resblock2_hls_reference_model            -     @480            
+      trans_num_idx               integral                                 32    'h0             
+    resblock2_hls_virtual_sqr     resblock2_hls_virtual_sequencer          -     @582            
+      rsp_export                  uvm_analysis_export                      -     @591            
+      seq_item_export             uvm_seq_item_pull_imp                    -     @709            
+      arbitration_queue           array                                    0     -               
+      lock_queue                  array                                    0     -               
+      num_last_reqs               integral                                 32    'd1             
+      num_last_rsps               integral                                 32    'd1             
+    subsys_mon                    resblock2_hls_subsystem_monitor          -     @493            
+      scbd                        resblock2_hls_scoreboard                 -     @2377           
+        refm                      resblock2_hls_reference_model            -     @480            
+          trans_num_idx           integral                                 32    'h0             
+      svr_master_Zx_imp           uvm_analysis_imp_svr_master_Zx           -     @562            
+      svr_master_Zy_imp           uvm_analysis_imp_svr_master_Zy           -     @572            
+      svr_master_add_mult_a_imp   uvm_analysis_imp_svr_master_add_mult_a   -     @502            
+      svr_master_add_mult_b_imp   uvm_analysis_imp_svr_master_add_mult_b   -     @532            
+      svr_master_add_shift_a_imp  uvm_analysis_imp_svr_master_add_shift_a  -     @512            
+      svr_master_add_shift_b_imp  uvm_analysis_imp_svr_master_add_shift_b  -     @542            
+      svr_master_add_za_imp       uvm_analysis_imp_svr_master_add_za       -     @522            
+      svr_master_add_zb_imp       uvm_analysis_imp_svr_master_add_zb       -     @552            
+    env_master_svr_add_mult_a     uvm_env                                  -     @397            
+    env_master_svr_add_shift_a    uvm_env                                  -     @410            
+    env_master_svr_add_za         uvm_env                                  -     @420            
+    env_master_svr_add_mult_b     uvm_env                                  -     @430            
+    env_master_svr_add_shift_b    uvm_env                                  -     @440            
+    env_master_svr_add_zb         uvm_env                                  -     @450            
+    env_master_svr_Zx             uvm_env                                  -     @460            
+    env_master_svr_Zy             uvm_env                                  -     @470            
+    refm                          resblock2_hls_reference_model            -     @480            
+    resblock2_hls_virtual_sqr     resblock2_hls_virtual_sequencer          -     @582            
+    resblock2_hls_cfg             resblock2_hls_config                     -     @380            
+      port_add_mult_a_cfg         svr_config                               -     @381            
+        svr_type                  svr_inst_type                            32    SVR_MASTER      
+        prt_type                  svr_protocol_type                        32    AP_NONE         
+        is_active                 svr_active_passive_enum                  1     SVR_ACTIVE      
+        reset_level               svr_reset_level_enum                     1     RESET_LEVEL_HIGH
+        spec_cfg                  svr_spec_cfg_enum                        32    NORMAL          
+        clatency                  svr_latency                              -     @382            
+          transfer_latency        integral                                 32    'h0             
+      port_add_shift_a_cfg        svr_config                               -     @383            
+        svr_type                  svr_inst_type                            32    SVR_MASTER      
+        prt_type                  svr_protocol_type                        32    AP_NONE         
+        is_active                 svr_active_passive_enum                  1     SVR_ACTIVE      
+        reset_level               svr_reset_level_enum                     1     RESET_LEVEL_HIGH
+        spec_cfg                  svr_spec_cfg_enum                        32    NORMAL          
+        clatency                  svr_latency                              -     @384            
+          transfer_latency        integral                                 32    'h0             
+      port_add_za_cfg             svr_config                               -     @385            
+        svr_type                  svr_inst_type                            32    SVR_MASTER      
+        prt_type                  svr_protocol_type                        32    AP_NONE         
+        is_active                 svr_active_passive_enum                  1     SVR_ACTIVE      
+        reset_level               svr_reset_level_enum                     1     RESET_LEVEL_HIGH
+        spec_cfg                  svr_spec_cfg_enum                        32    NORMAL          
+        clatency                  svr_latency                              -     @386            
+          transfer_latency        integral                                 32    'h0             
+      port_add_mult_b_cfg         svr_config                               -     @387            
+        svr_type                  svr_inst_type                            32    SVR_MASTER      
+        prt_type                  svr_protocol_type                        32    AP_NONE         
+        is_active                 svr_active_passive_enum                  1     SVR_ACTIVE      
+        reset_level               svr_reset_level_enum                     1     RESET_LEVEL_HIGH
+        spec_cfg                  svr_spec_cfg_enum                        32    NORMAL          
+        clatency                  svr_latency                              -     @388            
+          transfer_latency        integral                                 32    'h0             
+      port_add_shift_b_cfg        svr_config                               -     @389            
+        svr_type                  svr_inst_type                            32    SVR_MASTER      
+        prt_type                  svr_protocol_type                        32    AP_NONE         
+        is_active                 svr_active_passive_enum                  1     SVR_ACTIVE      
+        reset_level               svr_reset_level_enum                     1     RESET_LEVEL_HIGH
+        spec_cfg                  svr_spec_cfg_enum                        32    NORMAL          
+        clatency                  svr_latency                              -     @390            
+          transfer_latency        integral                                 32    'h0             
+      port_add_zb_cfg             svr_config                               -     @391            
+        svr_type                  svr_inst_type                            32    SVR_MASTER      
+        prt_type                  svr_protocol_type                        32    AP_NONE         
+        is_active                 svr_active_passive_enum                  1     SVR_ACTIVE      
+        reset_level               svr_reset_level_enum                     1     RESET_LEVEL_HIGH
+        spec_cfg                  svr_spec_cfg_enum                        32    NORMAL          
+        clatency                  svr_latency                              -     @392            
+          transfer_latency        integral                                 32    'h0             
+      port_Zx_cfg                 svr_config                               -     @393            
+        svr_type                  svr_inst_type                            32    SVR_MASTER      
+        prt_type                  svr_protocol_type                        32    AP_NONE         
+        is_active                 svr_active_passive_enum                  1     SVR_ACTIVE      
+        reset_level               svr_reset_level_enum                     1     RESET_LEVEL_HIGH
+        spec_cfg                  svr_spec_cfg_enum                        32    NORMAL          
+        clatency                  svr_latency                              -     @394            
+          transfer_latency        integral                                 32    'h0             
+      port_Zy_cfg                 svr_config                               -     @395            
+        svr_type                  svr_inst_type                            32    SVR_MASTER      
+        prt_type                  svr_protocol_type                        32    AP_NONE         
+        is_active                 svr_active_passive_enum                  1     SVR_ACTIVE      
+        reset_level               svr_reset_level_enum                     1     RESET_LEVEL_HIGH
+        spec_cfg                  svr_spec_cfg_enum                        32    NORMAL          
+        clatency                  svr_latency                              -     @396            
+          transfer_latency        integral                                 32    'h0             
+      check_ena                   integral                                 32    'h0             
+      cover_ena                   integral                                 32    'h0             
+-------------------------------------------------------------------------------------------------
+
+UVM_INFO D:AMDDesignTooÿÿ‚5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "16539105000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 16539175 ns : File "D:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:07:08 . Memory (MB): peak = 233.398 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 52856 KB (Peak: 52856 KB), Simulation CPU Usage: 332968 ms
+INFO: [Common 17-206] Exiting xsim at Thu May  7 07:14:03 2026...
+INFO: [COSIM 212-316] Starting C post checking ...
+========================================
+Running RESBLOCK2 HLS synthetic test
+RES2_IN_SIZE  = 5120
+RES2_OUT_SIZE = 5120
+RES2_W_SIZE   = 20480
+========================================
+RESBLOCK2 HLS synthetic PASS
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-2161] Finished Command cosim_design Elapsed time: 00:10:20; Allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 173 seconds. Total CPU system time: 8 seconds. Total elapsed time: 948.476 seconds; peak allocated memory: 556.059 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 15m 53s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

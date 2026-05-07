@@ -1,0 +1,416 @@
+
+****** vitis-run v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-08:29:27
+  **** Start of session at: Thu May  7 06:47:42 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script 'D:/Thesis/workspaces/HLS01/scripts/run_downsample_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project downsample_hls_prj 
+WARNING: [HLS 200-2182] The 'downsample_hls_prj' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Creating and opening solution 'D:/Thesis/workspaces/HLS01/downsample_hls_prj'.
+INFO: [HLS 200-1510] Running: set_top downsample_hls 
+INFO: [HLS 200-1510] Running: add_files src/hls_quant.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/hls_quant.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/conv1d_down_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/conv1d_down_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/relu_down_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/relu_down_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/downsample_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/downsample_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb/test_downsample_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding test bench file 'tb/test_downsample_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Creating and opening solution 'D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../tb/test_downsample_hls.cpp in debug mode
+   Compiling ../../../../src/downsample_hls.cpp in debug mode
+   Compiling ../../../../src/relu_down_hls.cpp in debug mode
+   Compiling ../../../../src/conv1d_down_hls.cpp in debug mode
+   Compiling ../../../../src/hls_quant.cpp in debug mode
+   Generating csim.exe
+========================================
+Running DOWNSAMPLE HLS synthetic test
+DOWN_IN_SIZE  = 5120
+DOWN_OUT_SIZE = 5120
+DOWN_W_SIZE   = 10240
+========================================
+DOWNSAMPLE HLS synthetic PASS
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:03; Allocated memory: 0.613 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.082 seconds; current allocated memory: 140.906 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'src/downsample_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/relu_down_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/conv1d_down_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hls_quant.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.837 seconds; current allocated memory: 143.586 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 154 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,707 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,812 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,279 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,275 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,275 instructions in the design after the 'Array/Struct' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,275 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,275 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,275 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,275 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,275 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,275 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,275 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,275 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,293 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,305 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_23_3' is marked as complete unroll implied by the pipeline pragma (src/conv1d_down_hls.cpp:23:30)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_24_4' is marked as complete unroll implied by the pipeline pragma (src/conv1d_down_hls.cpp:24:34)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_23_3' (src/conv1d_down_hls.cpp:23:30) in function 'down_conv1d_hls' completely with a factor of 32 (src/conv1d_down_hls.cpp:16:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_24_4' (src/conv1d_down_hls.cpp:24:34) in function 'down_conv1d_hls' completely with a factor of 5 (src/conv1d_down_hls.cpp:16:0)
+INFO: [HLS 214-178] Inlining function 'requantize_to_int32(int, int, int)' into 'requantize_to_u8(int, int, int, int)' (src/hls_quant.cpp:35:0)
+INFO: [HLS 214-178] Inlining function 'clamp_u8(int)' into 'requantize_to_u8(int, int, int, int)' (src/hls_quant.cpp:35:0)
+INFO: [HLS 214-178] Inlining function 'requantize_to_u8(int, int, int, int)' into 'down_conv1d_hls(unsigned char const*, signed char const*, int const*, unsigned char*, int const*, int const*, int const*, int, int)' (src/conv1d_down_hls.cpp:16:0)
+INFO: [HLS 214-178] Inlining function 'down_relu_hls(unsigned char const*, unsigned char*, int)' into 'downsample_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int)' (src/downsample_hls.cpp:20:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 19.592 seconds; current allocated memory: 145.859 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 145.859 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.487 seconds; current allocated memory: 156.777 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.276 seconds; current allocated memory: 159.680 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/conv1d_down_hls.cpp:19:1) to (src/conv1d_down_hls.cpp:18:26) in function 'down_conv1d_hls'... converting 195 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'down_conv1d_hls' (src/conv1d_down_hls.cpp:14:30)...160 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.544 seconds; current allocated memory: 187.168 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_17_1'(src/conv1d_down_hls.cpp:17:22) and 'VITIS_LOOP_18_2'(src/conv1d_down_hls.cpp:18:26) in function 'down_conv1d_hls' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_17_1' (src/conv1d_down_hls.cpp:17:22) in function 'down_conv1d_hls'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.031 seconds; current allocated memory: 191.691 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'downsample_hls' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'down_conv1d_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_17_1_VITIS_LOOP_18_2'.
+WARNING: [HLS 200-448] Lower bound of II is 80 due to multiple 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_down_hls.cpp:33) on array 'input_r' accessing core:RAM:input_r
+WARNING: [HLS 200-448] Lower bound of II is 80 due to multiple 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'weight' accessing core:RAM:weight
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 80, Depth = 91, loop 'VITIS_LOOP_17_1_VITIS_LOOP_18_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 8.035 seconds; current allocated memory: 214.961 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.416 seconds; current allocated memory: 215.988 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'downsample_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_8_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.952 seconds; current allocated memory: 216.102 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.079 seconds; current allocated memory: 216.199 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'down_conv1d_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'down_conv1d_hls' pipeline 'VITIS_LOOP_17_1_VITIS_LOOP_18_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'down_conv1d_hls'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.812 seconds; current allocated memory: 232.473 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'downsample_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'downsample_hls/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'downsample_hls/weight' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'downsample_hls/bias' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'downsample_hls/multiplier' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'downsample_hls/shift' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'downsample_hls/weight_zp' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'downsample_hls/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'downsample_hls/Zx' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'downsample_hls/Zy' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'downsample_hls' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'downsample_hls'.
+INFO: [RTMG 210-278] Implementing memory 'downsample_hls_conv_out_RAM_1P_BRAM_1R1W' using block RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.424 seconds; current allocated memory: 281.711 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.922 seconds; current allocated memory: 281.711 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.799 seconds; current allocated memory: 286.871 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for downsample_hls.
+INFO: [VLOG 209-307] Generating Verilog RTL for downsample_hls.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 125.29 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:51; Allocated memory: 146.504 MB.
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "D:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang++"
+   Compiling apatb_downsample_hls.cpp
+   Compiling conv1d_down_hls.cpp_pre.cpp.tb.cpp
+   Compiling downsample_hls.cpp_pre.cpp.tb.cpp
+   Compiling hls_quant.cpp_pre.cpp.tb.cpp
+   Compiling relu_down_hls.cpp_pre.cpp.tb.cpp
+   Compiling test_downsample_hls.cpp_pre.cpp.tb.cpp
+   Compiling apatb_downsample_hls_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+========================================
+Running DOWNSAMPLE HLS synthetic test
+DOWN_IN_SIZE  = 5120
+DOWN_OUT_SIZE = 5120
+DOWN_W_SIZE   = 10240
+========================================
+DOWNSAMPLE HLS synthetic PASS
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged writeonly
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+D:\Thesis\workspaces\HLS01\downsample_hls_prj\solution1\sim\verilog>set PATH= 
+
+D:\Thesis\workspaces\HLS01\downsample_hls_prj\solution1\sim\verilog>call D:/AMDDesignTools/2025.2/Vivado/bin/xelab xil_defaultlib.apatb_downsample_hls_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj downsample_hls.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_21 -L floating_point_v7_0_26 --lib "ieee_proposed=./ieee_proposed" -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./downsample_hls_subsystem  -s downsample_hls  
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_downsample_hls_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj downsample_hls.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_21 -L floating_point_v7_0_26 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./downsample_hls_subsystem -s downsample_hls 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/AESL_automem_bias.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_bias
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/AESL_automem_input_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/AESL_automem_multiplier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_multiplier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/AESL_automem_output_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_output_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/AESL_automem_shift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_shift
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/AESL_automem_weight.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_weight
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/AESL_automem_weight_zp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_weight_zp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/downsample_hls.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_downsample_hls_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/downsample_hls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module downsample_hls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/downsample_hls_conv_out_RAM_1P_BRAM_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module downsample_hls_conv_out_RAM_1P_BRAM_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/downsample_hls_down_conv1d_hls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module downsample_hls_down_conv1d_hls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/downsample_hls_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module downsample_hls_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/downsample_hls_mul_32s_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module downsample_hls_mul_32s_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/downsample_hls_mul_32s_32s_64_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module downsample_hls_mul_32s_32s_64_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/svr/svr_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/svr/svr_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/downsample_hls_subsystem/downsample_hls_subsystem_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/svtb/misc_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/downsample_hls_prj/solution1/sim/verilog/svtb/sv_module_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv_module_top
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.svr_pkg
+Compiling package xil_defaultlib.file_agent_pkg
+Compiling package xil_defaultlib.downsample_hls_subsystem_pkg
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.downsample_hls_conv_out_RAM_1P_B...
+Compiling module xil_defaultlib.downsample_hls_mul_32s_32s_32_2_...
+Compiling module xil_defaultlib.downsample_hls_mul_32s_32s_64_2_...
+Compiling module xil_defaultlib.downsample_hls_flow_control_loop...
+Compiling module xil_defaultlib.downsample_hls_down_conv1d_hls
+Compiling module xil_defaultlib.downsample_hls
+Compiling module xil_defaultlib.misc_interface_default
+Compiling module xil_defaultlib.svr_if_default
+Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.AESL_automem_input_r
+Compiling module xil_defaultlib.AESL_automem_weight
+Compiling module xil_defaultlib.AESL_automem_bias
+Compiling module xil_defaultlib.AESL_automem_multiplier
+Compiling module xil_defaultlib.AESL_automem_shift
+Compiling module xil_defaultlib.AESL_automem_weight_zp
+Compiling module xil_defaultlib.AESL_automem_output_r
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.pp_loop_intf(FSM_WIDTH=4)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=80)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_downsample_hls_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot downsample_hls
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu May  7 06:51:17 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/downsample_hls/xsim_script.tcl
+# xsim {downsample_hls} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=downsample_hls_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -autoloadwcfg -tclbatch {downsample_hls.tcl}
+Time resolution is 1 ps
+source downsample_hls.tcl
+## run all
+UVM_INFO D:AMDDesignTooÿÿ‚5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO D:AMDDesignTooÿÿ‚5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO D:AMDDesignTooÿÿ‚5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+----------------------------------------------------------------------------------------
+Name                            Type                              Size  Value           
+----------------------------------------------------------------------------------------
+uvm_test_top                    downsample_hls_test_lib           -     @349            
+  top_env                       downsample_hls_env                -     @360            
+    downsample_hls_virtual_sqr  downsample_hls_virtual_sequencer  -     @444            
+      rsp_export                uvm_analysis_export               -     @453            
+      seq_item_export           uvm_seq_item_pull_imp             -     @571            
+      arbitration_queue         array                             0     -               
+      lock_queue                array                             0     -               
+      num_last_reqs             integral                          32    'd1             
+      num_last_rsps             integral                          32    'd1             
+    env_master_svr_Zx           uvm_env                           -     @379            
+      m_agt                     uvm_agent                         -     @587            
+        drv                     uvm_driver #(REQ,RSP)             -     @735            
+          rsp_port              uvm_analysis_port                 -     @754            
+          seq_item_port         uvm_seq_item_pull_port            -     @744            
+        mon                     uvm_monitor                       -     @764            
+          item_collect_port     uvm_analysis_port                 -     @775            
+        sqr                     uvm_sequencer                     -     @598            
+          rsp_export            uvm_analysis_export               -     @607            
+          seq_item_export       uvm_seq_item_pull_imp             -     @725            
+          arbitration_queue     array                             0     -               
+          lock_queue            array                             0     -               
+          num_last_reqs         integral                          32    'd1             
+          num_last_rsps         integral                          32    'd1             
+    env_master_svr_Zy           uvm_env                           -     @392            
+      m_agt                     uvm_agent                         -     @793            
+        drv                     uvm_driver #(REQ,RSP)             -     @941            
+          rsp_port              uvm_analysis_port                 -     @960            
+          seq_item_port         uvm_seq_item_pull_port            -     @950            
+        mon                     uvm_monitor                       -     @970            
+          item_collect_port     uvm_analysis_port                 -     @981            
+        sqr                     uvm_sequencer                     -     @804            
+          rsp_export            uvm_analysis_export               -     @813            
+          seq_item_export       uvm_seq_item_pull_imp             -     @931            
+          arbitration_queue     array                             0     -               
+          lock_queue            array                             0     -               
+          num_last_reqs         integral                          32    'd1             
+          num_last_rsps         integral                          32    'd1             
+    refm                        downsample_hls_reference_model    -     @402            
+      trans_num_idx             integral                          32    'h0             
+    subsys_mon                  downsample_hls_subsystem_monitor  -     @415            
+      scbd                      downsample_hls_scoreboard         -     @1003           
+        refm                    downsample_hls_reference_model    -     @402            
+          trans_num_idx         integral                          32    'h0             
+      svr_master_Zx_imp         uvm_analysis_imp_svr_master_Zx    -     @424            
+      svr_master_Zy_imp         uvm_analysis_imp_svr_master_Zy    -     @434            
+    env_master_svr_Zx           uvm_env                           -     @379            
+    env_master_svr_Zy           uvm_env                           -     @392            
+    refm                        downsample_hls_reference_model    -     @402            
+    downsample_hls_virtual_sqr  downsample_hls_virtual_sequencer  -     @444            
+    downsample_hls_cfg          downsample_hls_config             -     @374            
+      port_Zx_cfg               svr_config                        -     @375            
+        svr_type                svr_inst_type                     32    SVR_MASTER      
+        prt_type                svr_protocol_type                 32    AP_NONE         
+        is_active               svr_active_passive_enum           1     SVR_ACTIVE      
+        reset_level             svr_reset_level_enum              1     RESET_LEVEL_HIGH
+        spec_cfg                svr_spec_cfg_enum                 32    NORMAL          
+        clatency                svr_latency                       -     @376            
+          transfer_latency      integral                          32    'h0             
+      port_Zy_cfg               svr_config                        -     @377            
+        svr_type                svr_inst_type                     32    SVR_MASTER      
+        prt_type                svr_protocol_type                 32    AP_NONE         
+        is_active               svr_active_passive_enum           1     SVR_ACTIVE      
+        reset_level             svr_reset_level_enum              1     RESET_LEVEL_HIGH
+        spec_cfg                svr_spec_cfg_enum                 32    NORMAL          
+        clatency                svr_latency                       -     @378            
+          transfer_latency      integral                          32    'h0             
+      check_ena                 integral                          32    'h0             
+      cover_ena                 integral                          32    'h0             
+----------------------------------------------------------------------------------------
+
+UVM_INFO D:AMDDesignTooÿÿ‚5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "4147495000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 4147565 ns : File "D:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:01:16 . Memory (MB): peak = 223.715 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 29844 KB (Peak: 29844 KB), Simulation CPU Usage: 50046 ms
+INFO: [Common 17-206] Exiting xsim at Thu May  7 06:52:38 2026...
+INFO: [COSIM 212-316] Starting C post checking ...
+========================================
+Running DOWNSAMPLE HLS synthetic test
+DOWN_IN_SIZE  = 5120
+DOWN_OUT_SIZE = 5120
+DOWN_W_SIZE   = 10240
+========================================
+DOWNSAMPLE HLS synthetic PASS
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-2161] Finished Command cosim_design Elapsed time: 00:03:57; Allocated memory: 1.910 MB.
+INFO: [HLS 200-112] Total CPU user time: 16 seconds. Total CPU system time: 2 seconds. Total elapsed time: 295.888 seconds; peak allocated memory: 288.785 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 5m 0s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

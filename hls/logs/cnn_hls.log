@@ -1,0 +1,1124 @@
+
+****** vitis-run v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-08:29:27
+  **** Start of session at: Thu May  7 07:16:04 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script 'D:/Thesis/workspaces/HLS01/scripts/run_cnn_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project cnn_hls_prj 
+WARNING: [HLS 200-2182] The 'cnn_hls_prj' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Creating and opening solution 'D:/Thesis/workspaces/HLS01/cnn_hls_prj'.
+INFO: [HLS 200-1510] Running: set_top cnn_hls 
+INFO: [HLS 200-1510] Running: add_files src/hls_quant.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/hls_quant.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/conv1d_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/conv1d_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/relu_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/relu_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/stem_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/stem_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/conv1d_res_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/conv1d_res_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/relu_res_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/relu_res_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/add_res_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/add_res_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/resblock_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/resblock_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/conv1d_down_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/conv1d_down_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/relu_down_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/relu_down_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/downsample_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/downsample_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/conv1d_res2_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/conv1d_res2_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/relu_res2_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/relu_res2_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/add_res2_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/add_res2_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/resblock2_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/resblock2_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/cnn_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding design file 'src/cnn_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb/test_cnn_hls.cpp -cflags -Iinclude 
+INFO: [HLS 200-10] Adding test bench file 'tb/test_cnn_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Creating and opening solution 'D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../tb/test_cnn_hls.cpp in debug mode
+   Compiling ../../../../src/cnn_hls.cpp in debug mode
+   Compiling ../../../../src/resblock2_hls.cpp in debug mode
+   Compiling ../../../../src/add_res2_hls.cpp in debug mode
+   Compiling ../../../../src/relu_res2_hls.cpp in debug mode
+   Compiling ../../../../src/conv1d_res2_hls.cpp in debug mode
+   Compiling ../../../../src/downsample_hls.cpp in debug mode
+   Compiling ../../../../src/relu_down_hls.cpp in debug mode
+   Compiling ../../../../src/conv1d_down_hls.cpp in debug mode
+   Compiling ../../../../src/resblock_hls.cpp in debug mode
+   Compiling ../../../../src/add_res_hls.cpp in debug mode
+   Compiling ../../../../src/relu_res_hls.cpp in debug mode
+   Compiling ../../../../src/conv1d_res_hls.cpp in debug mode
+   Compiling ../../../../src/stem_hls.cpp in debug mode
+   Compiling ../../../../src/relu_hls.cpp in debug mode
+   Compiling ../../../../src/conv1d_hls.cpp in debug mode
+   Compiling ../../../../src/hls_quant.cpp in debug mode
+   Generating csim.exe
+========================================
+Running CNN HLS synthetic test
+CNN input size  = 320
+CNN output size = 5120
+========================================
+CNN HLS synthetic PASS
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:06; Allocated memory: 0.562 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.568 seconds; current allocated memory: 140.613 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'src/cnn_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/resblock2_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/add_res2_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/relu_res2_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/conv1d_res2_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/downsample_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/relu_down_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/conv1d_down_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/resblock_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/add_res_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/relu_res_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/conv1d_res_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/stem_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/relu_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/conv1d_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hls_quant.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 30.799 seconds; current allocated memory: 144.492 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,100 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 26,139 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 19,233 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 16,601 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 16,572 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 16,572 instructions in the design after the 'Array/Struct' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 16,572 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 16,572 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 16,572 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 16,572 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 16,572 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 16,572 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27,639 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 23,060 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 23,128 instructions in the design after the 'HW Transforms' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 23,203 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_23_3' is marked as complete unroll implied by the pipeline pragma (src/conv1d_res2_hls.cpp:23:30)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_24_4' is marked as complete unroll implied by the pipeline pragma (src/conv1d_res2_hls.cpp:24:34)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_23_3' is marked as complete unroll implied by the pipeline pragma (src/conv1d_down_hls.cpp:23:30)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_24_4' is marked as complete unroll implied by the pipeline pragma (src/conv1d_down_hls.cpp:24:34)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_23_3' is marked as complete unroll implied by the pipeline pragma (src/conv1d_res_hls.cpp:23:30)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_24_4' is marked as complete unroll implied by the pipeline pragma (src/conv1d_res_hls.cpp:24:34)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_42_3' is marked as complete unroll implied by the pipeline pragma (src/conv1d_hls.cpp:42:30)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_43_4' is marked as complete unroll implied by the pipeline pragma (src/conv1d_hls.cpp:43:34)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_23_3' (src/conv1d_res2_hls.cpp:23:30) in function 'res2_conv1d_hls' completely with a factor of 64 (src/conv1d_res2_hls.cpp:16:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_24_4' (src/conv1d_res2_hls.cpp:24:34) in function 'res2_conv1d_hls' completely with a factor of 5 (src/conv1d_res2_hls.cpp:16:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_23_3' (src/conv1d_down_hls.cpp:23:30) in function 'down_conv1d_hls' completely with a factor of 32 (src/conv1d_down_hls.cpp:16:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_24_4' (src/conv1d_down_hls.cpp:24:34) in function 'down_conv1d_hls' completely with a factor of 5 (src/conv1d_down_hls.cpp:16:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_23_3' (src/conv1d_res_hls.cpp:23:30) in function 'res_conv1d_hls' completely with a factor of 32 (src/conv1d_res_hls.cpp:16:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_24_4' (src/conv1d_res_hls.cpp:24:34) in function 'res_conv1d_hls' completely with a factor of 5 (src/conv1d_res_hls.cpp:16:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_42_3' (src/conv1d_hls.cpp:42:30) in function 'stem_conv1d_hls' completely with a factor of 1 (src/conv1d_hls.cpp:16:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_43_4' (src/conv1d_hls.cpp:43:34) in function 'stem_conv1d_hls' completely with a factor of 5 (src/conv1d_hls.cpp:16:0)
+INFO: [HLS 214-178] Inlining function 'requantize_to_int32(int, int, int)' into 'requantize_to_u8(int, int, int, int)' (src/hls_quant.cpp:35:0)
+INFO: [HLS 214-178] Inlining function 'clamp_u8(int)' into 'requantize_to_u8(int, int, int, int)' (src/hls_quant.cpp:35:0)
+INFO: [HLS 214-178] Inlining function 'requantize_to_u8(int, int, int, int)' into 'stem_conv1d_hls(unsigned char const*, signed char const*, int const*, unsigned char*, int const*, int const*, int const*, int, int)' (src/conv1d_hls.cpp:16:0)
+INFO: [HLS 214-178] Inlining function 'stem_relu_hls(unsigned char const*, unsigned char*, int)' into 'stem_hls(unsigned char const*, signed char const*, int const*, unsigned char*, int const*, int const*, int const*, int, int)' (src/stem_hls.cpp:19:0)
+INFO: [HLS 214-178] Inlining function 'requantize_to_u8(int, int, int, int)' into 'res_conv1d_hls(unsigned char const*, signed char const*, int const*, unsigned char*, int const*, int const*, int const*, int, int)' (src/conv1d_res_hls.cpp:16:0)
+INFO: [HLS 214-178] Inlining function 'requantize_to_int32(int, int, int)' into 'add_res_hls(unsigned char const*, unsigned char const*, unsigned char*, int, int, int, int, int, int, int)' (src/add_res_hls.cpp:18:0)
+INFO: [HLS 214-178] Inlining function 'clamp_u8(int)' into 'add_res_hls(unsigned char const*, unsigned char const*, unsigned char*, int, int, int, int, int, int, int)' (src/add_res_hls.cpp:18:0)
+INFO: [HLS 214-178] Inlining function 'res_relu_hls(unsigned char const*, unsigned char*, int)' into 'resblock_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int, int, int, int, int, int, int)' (src/resblock_hls.cpp:34:0)
+INFO: [HLS 214-178] Inlining function 'add_res_hls(unsigned char const*, unsigned char const*, unsigned char*, int, int, int, int, int, int, int)' into 'resblock_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int, int, int, int, int, int, int)' (src/resblock_hls.cpp:34:0)
+INFO: [HLS 214-178] Inlining function 'requantize_to_u8(int, int, int, int)' into 'down_conv1d_hls(unsigned char const*, signed char const*, int const*, unsigned char*, int const*, int const*, int const*, int, int)' (src/conv1d_down_hls.cpp:16:0)
+INFO: [HLS 214-178] Inlining function 'down_relu_hls(unsigned char const*, unsigned char*, int)' into 'downsample_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int)' (src/downsample_hls.cpp:20:0)
+INFO: [HLS 214-178] Inlining function 'requantize_to_u8(int, int, int, int)' into 'res2_conv1d_hls(unsigned char const*, signed char const*, int const*, unsigned char*, int const*, int const*, int const*, int, int)' (src/conv1d_res2_hls.cpp:16:0)
+INFO: [HLS 214-178] Inlining function 'requantize_to_int32(int, int, int)' into 'add_res2_hls(unsigned char const*, unsigned char const*, unsigned char*, int, int, int, int, int, int, int)' (src/add_res2_hls.cpp:18:0)
+INFO: [HLS 214-178] Inlining function 'clamp_u8(int)' into 'add_res2_hls(unsigned char const*, unsigned char const*, unsigned char*, int, int, int, int, int, int, int)' (src/add_res2_hls.cpp:18:0)
+INFO: [HLS 214-178] Inlining function 'res2_relu_hls(unsigned char const*, unsigned char*, int)' into 'resblock2_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int, int, int, int, int, int, int)' (src/resblock2_hls.cpp:34:0)
+INFO: [HLS 214-178] Inlining function 'add_res2_hls(unsigned char const*, unsigned char const*, unsigned char*, int, int, int, int, int, int, int)' into 'resblock2_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int, int, int, int, int, int, int)' (src/resblock2_hls.cpp:34:0)
+INFO: [HLS 214-178] Inlining function 'stem_hls(unsigned char const*, signed char const*, int const*, unsigned char*, int const*, int const*, int const*, int, int)' into 'cnn_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int)' (src/cnn_hls.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'resblock_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int, int, int, int, int, int, int)' into 'cnn_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int)' (src/cnn_hls.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'downsample_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int)' into 'cnn_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int)' (src/cnn_hls.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'resblock2_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int, int, int, int, int, int, int)' into 'cnn_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int)' (src/cnn_hls.cpp:51:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'resblock_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int, int, int, int, int, int, int)::relu1_out' due to pipeline pragma (src/conv1d_res_hls.cpp:19:1)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'resblock2_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int, int, int, int, int, int, int)::relu1_out' due to pipeline pragma (src/conv1d_res2_hls.cpp:19:1)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'cnn_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int)::down_out' due to pipeline pragma (src/conv1d_res2_hls.cpp:19:1)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'cnn_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int)::res1_out' due to pipeline pragma (src/conv1d_down_hls.cpp:19:1)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'cnn_hls(unsigned char const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, signed char const*, int const*, int const*, int const*, int const*, unsigned char*, int, int)::stem_out' due to pipeline pragma (src/conv1d_res_hls.cpp:19:1)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ7cnn_hlsPKhPKaPKiS4_S4_S4_S2_S4_S4_S4_S4_S2_S4_S4_S4_S4_S2_S4_S4_S4_S4_S2_S4_S4_S4_S4_S2_S4_S4_S4_S4_PhiiE8stem_out': Cyclic partitioning with factor 3 on dimension 1. (src/cnn_hls.cpp:52:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ7cnn_hlsPKhPKaPKiS4_S4_S4_S2_S4_S4_S4_S4_S2_S4_S4_S4_S4_S2_S4_S4_S4_S4_S2_S4_S4_S4_S4_S2_S4_S4_S4_S4_PhiiE8res1_out': Cyclic partitioning with factor 3 on dimension 1. (src/cnn_hls.cpp:53:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ7cnn_hlsPKhPKaPKiS4_S4_S4_S2_S4_S4_S4_S4_S2_S4_S4_S4_S4_S2_S4_S4_S4_S4_S2_S4_S4_S4_S4_S2_S4_S4_S4_S4_PhiiE8down_out': Cyclic partitioning with factor 3 on dimension 1. (src/cnn_hls.cpp:54:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ13resblock2_hlsPKhPKaPKiS4_S4_S4_S2_S4_S4_S4_S4_PhiiiiiiiiE9relu1_out': Cyclic partitioning with factor 3 on dimension 1. (src/resblock2_hls.cpp:36:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ12resblock_hlsPKhPKaPKiS4_S4_S4_S2_S4_S4_S4_S4_PhiiiiiiiiE9relu1_out': Cyclic partitioning with factor 3 on dimension 1. (src/resblock_hls.cpp:52:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 112.831 seconds; current allocated memory: 144.492 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.014 seconds; current allocated memory: 144.492 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.196 seconds; current allocated memory: 144.492 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.711 seconds; current allocated memory: 144.492 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/conv1d_hls.cpp:38:1) to (src/conv1d_hls.cpp:37:26) in function 'stem_conv1d_hls'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/conv1d_res_hls.cpp:19:1) to (src/conv1d_res_hls.cpp:18:26) in function 'res_conv1d_hls'... converting 259 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/conv1d_res2_hls.cpp:19:1) to (src/conv1d_res2_hls.cpp:18:26) in function 'res2_conv1d_hls'... converting 515 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/conv1d_down_hls.cpp:19:1) to (src/conv1d_down_hls.cpp:18:26) in function 'down_conv1d_hls'... converting 195 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'stem_conv1d_hls' (src/conv1d_hls.cpp:4:26)...5 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'res_conv1d_hls' (src/conv1d_res_hls.cpp:14:30)...160 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'res2_conv1d_hls' (src/conv1d_res2_hls.cpp:14:30)...320 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'down_conv1d_hls' (src/conv1d_down_hls.cpp:14:30)...160 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 14 seconds. CPU system time: 0 seconds. Elapsed time: 15.947 seconds; current allocated memory: 144.492 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_36_1'(src/conv1d_hls.cpp:36:22) and 'VITIS_LOOP_37_2'(src/conv1d_hls.cpp:37:26) in function 'stem_conv1d_hls' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_17_1'(src/conv1d_res_hls.cpp:17:22) and 'VITIS_LOOP_18_2'(src/conv1d_res_hls.cpp:18:26) in function 'res_conv1d_hls' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_17_1'(src/conv1d_res2_hls.cpp:17:22) and 'VITIS_LOOP_18_2'(src/conv1d_res2_hls.cpp:18:26) in function 'res2_conv1d_hls' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_17_1'(src/conv1d_down_hls.cpp:17:22) and 'VITIS_LOOP_18_2'(src/conv1d_down_hls.cpp:18:26) in function 'down_conv1d_hls' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_36_1' (src/conv1d_hls.cpp:36:22) in function 'stem_conv1d_hls'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_17_1' (src/conv1d_res_hls.cpp:17:22) in function 'res_conv1d_hls'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_17_1' (src/conv1d_res2_hls.cpp:17:22) in function 'res2_conv1d_hls'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_17_1' (src/conv1d_down_hls.cpp:17:22) in function 'down_conv1d_hls'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 12 seconds. CPU system time: 0 seconds. Elapsed time: 13.54 seconds; current allocated memory: 212.508 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'cnn_hls' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stem_conv1d_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_36_1_VITIS_LOOP_37_2'.
+WARNING: [HLS 200-448] Lower bound of II is 3 due to multiple 'load' operation 8 bit ('xq', src/conv1d_hls.cpp:52) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_hls.cpp:52) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_hls.cpp:52) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_hls.cpp:52) on array 'input_r', 'load' operation 8 bit ('xq', src/conv1d_hls.cpp:52) on array 'input_r' accessing core:RAM:input_r
+WARNING: [HLS 200-448] Lower bound of II is 3 due to multiple 'load' operation 8 bit ('wq', src/conv1d_hls.cpp:59) on array 'stem_w', 'load' operation 8 bit ('wq', src/conv1d_hls.cpp:59) on array 'stem_w', 'load' operation 8 bit ('wq', src/conv1d_hls.cpp:59) on array 'stem_w', 'load' operation 8 bit ('wq', src/conv1d_hls.cpp:59) on array 'stem_w', 'load' operation 8 bit ('wq', src/conv1d_hls.cpp:59) on array 'stem_w' accessing core:RAM:stem_w
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 13, loop 'VITIS_LOOP_36_1_VITIS_LOOP_37_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.017 seconds; current allocated memory: 223.105 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 224.863 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_hls_Pipeline_VITIS_LOOP_16_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_16_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_16_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 225.188 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.034 seconds; current allocated memory: 225.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'res_conv1d_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_82) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_81) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_80) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_36) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_17_1_VITIS_LOOP_18_2'.
+WARNING: [HLS 200-448] Lower bound of II is 80 due to multiple 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1', 'load' operation 8 bit ('wq', src/conv1d_res_hls.cpp:37) on array 'res1_w1' accessing core:RAM:res1_w1
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 80, Depth = 92, loop 'VITIS_LOOP_17_1_VITIS_LOOP_18_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 24 seconds. CPU system time: 0 seconds. Elapsed time: 27.673 seconds; current allocated memory: 258.914 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.468 seconds; current allocated memory: 258.961 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_hls_Pipeline_VITIS_LOOP_8_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_8_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.009 seconds; current allocated memory: 258.961 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.059 seconds; current allocated memory: 258.965 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_hls_Pipeline_VITIS_LOOP_19_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_19_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'VITIS_LOOP_19_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.129 seconds; current allocated memory: 258.965 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 258.965 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_hls_Pipeline_VITIS_LOOP_8_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_8_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.104 seconds; current allocated memory: 258.977 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 258.977 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'down_conv1d_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_394) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_393) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_392) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_351) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_350) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_349) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_331) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_330) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_329) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_321) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_320) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_319) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_314) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_313) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_312) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_17_1_VITIS_LOOP_18_2'.
+WARNING: [HLS 200-448] Lower bound of II is 80 due to multiple 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w', 'load' operation 8 bit ('wq', src/conv1d_down_hls.cpp:37) on array 'down_w' accessing core:RAM:down_w
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 80, Depth = 92, loop 'VITIS_LOOP_17_1_VITIS_LOOP_18_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 23 seconds. CPU system time: 0 seconds. Elapsed time: 28.819 seconds; current allocated memory: 287.227 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.377 seconds; current allocated memory: 287.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_hls_Pipeline_VITIS_LOOP_8_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_8_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.927 seconds; current allocated memory: 287.227 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.029 seconds; current allocated memory: 287.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'res2_conv1d_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_271) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_270) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_269) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_268) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_184) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_183) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_182) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_141) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_140) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_139) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_138) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_121) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_120) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_119) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_118) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_111) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_110) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_109) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_108) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_104) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_103) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_17_1_VITIS_LOOP_18_2'.
+WARNING: [HLS 200-448] Lower bound of II is 160 due to multiple 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1', 'load' operation 8 bit ('wq', src/conv1d_res2_hls.cpp:37) on array 'res2_w1' accessing core:RAM:res2_w1
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 160, Depth = 268, loop 'VITIS_LOOP_17_1_VITIS_LOOP_18_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 74 seconds. CPU system time: 0 seconds. Elapsed time: 86.335 seconds; current allocated memory: 312.316 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 6.448 seconds; current allocated memory: 312.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_hls_Pipeline_VITIS_LOOP_8_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_8_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.973 seconds; current allocated memory: 312.316 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 312.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_hls_Pipeline_VITIS_LOOP_19_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_19_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'VITIS_LOOP_19_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.115 seconds; current allocated memory: 312.316 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.085 seconds; current allocated memory: 312.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_hls_Pipeline_VITIS_LOOP_8_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_8_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.103 seconds; current allocated memory: 312.316 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.042 seconds; current allocated memory: 312.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 312.316 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.245 seconds; current allocated memory: 312.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stem_conv1d_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stem_conv1d_hls' pipeline 'VITIS_LOOP_36_1_VITIS_LOOP_37_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stem_conv1d_hls'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.715 seconds; current allocated memory: 312.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_hls_Pipeline_VITIS_LOOP_16_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_hls_Pipeline_VITIS_LOOP_16_1' pipeline 'VITIS_LOOP_16_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_hls_Pipeline_VITIS_LOOP_16_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.273 seconds; current allocated memory: 312.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'res_conv1d_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'res_conv1d_hls' pipeline 'VITIS_LOOP_17_1_VITIS_LOOP_18_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_8ns_10ns_12ns_23_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_8ns_11ns_13ns_25_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_8ns_12ns_14ns_27_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_8ns_8ns_10ns_19_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_8ns_9ns_11ns_21_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_10ns_12ns_21_1_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_11ns_13ns_23_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12ns_14ns_25_1_1': 40 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_13ns_15ns_27_1_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_129_5_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_9ns_11ns_19_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_8_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_8ns_3ns_2_12_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'res_conv1d_hls'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.811 seconds; current allocated memory: 312.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_hls_Pipeline_VITIS_LOOP_8_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_hls_Pipeline_VITIS_LOOP_8_1' pipeline 'VITIS_LOOP_8_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_hls_Pipeline_VITIS_LOOP_8_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 2 seconds. Elapsed time: 5.663 seconds; current allocated memory: 361.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_hls_Pipeline_VITIS_LOOP_19_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_hls_Pipeline_VITIS_LOOP_19_1' pipeline 'VITIS_LOOP_19_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_hls_Pipeline_VITIS_LOOP_19_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.187 seconds; current allocated memory: 361.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_hls_Pipeline_VITIS_LOOP_8_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_hls_Pipeline_VITIS_LOOP_8_11' pipeline 'VITIS_LOOP_8_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_hls_Pipeline_VITIS_LOOP_8_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.209 seconds; current allocated memory: 361.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'down_conv1d_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'down_conv1d_hls' pipeline 'VITIS_LOOP_17_1_VITIS_LOOP_18_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_8ns_10ns_12ns_23_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_8ns_11ns_13ns_25_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_8ns_12ns_14ns_27_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_8ns_8ns_10ns_19_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_8ns_9ns_11ns_21_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_10ns_12ns_21_1_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_11ns_13ns_23_1_1': 17 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12ns_14ns_25_1_1': 40 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_13ns_15ns_27_1_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_129_5_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_9ns_11ns_19_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_8_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_7ns_3ns_2_11_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'down_conv1d_hls'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.652 seconds; current allocated memory: 366.641 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_hls_Pipeline_VITIS_LOOP_8_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_hls_Pipeline_VITIS_LOOP_8_12' pipeline 'VITIS_LOOP_8_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_hls_Pipeline_VITIS_LOOP_8_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 5.781 seconds; current allocated memory: 442.676 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'res2_conv1d_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'res2_conv1d_hls' pipeline 'VITIS_LOOP_17_1_VITIS_LOOP_18_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_7ns_10ns_12ns_23_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_7ns_11ns_13ns_25_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_7ns_12ns_14ns_27_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_7ns_7ns_9ns_17_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_7ns_8ns_10ns_19_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_7ns_9ns_11ns_21_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_10ns_12ns_21_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_11ns_13ns_23_1_1': 40 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12ns_14ns_25_1_1': 83 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_13ns_15ns_27_1_1': 40 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_129_5_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_9ns_15_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_9ns_11ns_19_1_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_8_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_7ns_3ns_2_11_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'res2_conv1d_hls'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 8 seconds. CPU system time: 0 seconds. Elapsed time: 10.56 seconds; current allocated memory: 479.996 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_hls_Pipeline_VITIS_LOOP_8_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_hls_Pipeline_VITIS_LOOP_8_13' pipeline 'VITIS_LOOP_8_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_hls_Pipeline_VITIS_LOOP_8_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 7 seconds. CPU system time: 3 seconds. Elapsed time: 14.131 seconds; current allocated memory: 627.648 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_hls_Pipeline_VITIS_LOOP_19_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_hls_Pipeline_VITIS_LOOP_19_14' pipeline 'VITIS_LOOP_19_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_hls_Pipeline_VITIS_LOOP_19_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.425 seconds; current allocated memory: 627.648 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_hls_Pipeline_VITIS_LOOP_8_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_hls_Pipeline_VITIS_LOOP_8_15' pipeline 'VITIS_LOOP_8_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_hls_Pipeline_VITIS_LOOP_8_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.745 seconds; current allocated memory: 627.648 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/stem_w' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/stem_b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/stem_m' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/stem_s' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/stem_wzp' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res1_w1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res1_b1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res1_m1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res1_s1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res1_wzp1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res1_w2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res1_b2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res1_m2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res1_s2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res1_wzp2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/down_w' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/down_b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/down_m' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/down_s' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/down_wzp' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res2_w1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res2_b1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res2_m1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res2_s1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res2_wzp1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res2_w2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res2_b2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res2_m2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res2_s2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/res2_wzp2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/Zx' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_hls/Zy' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'cnn_hls' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_2_RAM_1P_BRAM_1R1W' to 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_2_RAbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_1_RAM_1P_BRAM_1R1W' to 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_1_RAcud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_RAM_1P_BRAM_1R1W' to 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_RAM_dEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'resblock_hls_unsigned_char_const_signed_char_const_int_const_int_const_i_2_RAM_1P_BRAM_1R1W' to 'resblock_hls_unsigned_char_const_signed_char_const_int_const_int_const_i_2_RAeOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'resblock_hls_unsigned_char_const_signed_char_const_int_const_int_const_i_RAM_1P_BRAM_1R1W' to 'resblock_hls_unsigned_char_const_signed_char_const_int_const_int_const_i_RAM_fYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'resblock_hls_unsigned_char_const_signed_char_const_int_const_int_const_i_1_RAM_1P_BRAM_1R1W' to 'resblock_hls_unsigned_char_const_signed_char_const_int_const_int_const_i_1_RAg8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_5_RAM_1P_BRAM_1R1W' to 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_5_RAhbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_4_RAM_1P_BRAM_1R1W' to 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_4_RAibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_3_RAM_1P_BRAM_1R1W' to 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_3_RAjbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_8_RAM_1P_BRAM_1R1W' to 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_8_RAkbM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_7_RAM_1P_BRAM_1R1W' to 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_7_RAlbW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_6_RAM_1P_BRAM_1R1W' to 'cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_6_RAmb6' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'resblock2_hls_unsigned_char_const_signed_char_const_int_const_int_const_2_RAM_1P_BRAM_1R1W' to 'resblock2_hls_unsigned_char_const_signed_char_const_int_const_int_const_2_RAMncg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'resblock2_hls_unsigned_char_const_signed_char_const_int_const_int_const_1_RAM_1P_BRAM_1R1W' to 'resblock2_hls_unsigned_char_const_signed_char_const_int_const_int_const_1_RAMocq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'resblock2_mulmulmulmulhls_unsigned_char_const_signed_char_const_int_const_int_const_RAM_1P_BRAM_1R1W' to 'resblock2_mulmulmulmulhls_unsigned_char_const_signed_char_const_int_const_intpcA' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_hls'.
+INFO: [RTMG 210-278] Implementing memory 'cnn_hls_conv_out_RAM_1P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_hls_cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_2_RAbkb' using block RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.025 seconds; current allocated memory: 627.648 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.929 seconds; current allocated memory: 627.648 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 11.505 seconds; current allocated memory: 627.648 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for cnn_hls.
+INFO: [VLOG 209-307] Generating Verilog RTL for cnn_hls.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 111.76 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:06:49; Allocated memory: 487.344 MB.
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "D:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang++"
+   Compiling add_res_hls.cpp_pre.cpp.tb.cpp
+   Compiling add_res2_hls.cpp_pre.cpp.tb.cpp
+   Compiling apatb_cnn_hls.cpp
+   Compiling cnn_hls.cpp_pre.cpp.tb.cpp
+   Compiling conv1d_down_hls.cpp_pre.cpp.tb.cpp
+   Compiling conv1d_hls.cpp_pre.cpp.tb.cpp
+   Compiling conv1d_res_hls.cpp_pre.cpp.tb.cpp
+   Compiling conv1d_res2_hls.cpp_pre.cpp.tb.cpp
+   Compiling downsample_hls.cpp_pre.cpp.tb.cpp
+   Compiling hls_quant.cpp_pre.cpp.tb.cpp
+   Compiling relu_down_hls.cpp_pre.cpp.tb.cpp
+   Compiling relu_hls.cpp_pre.cpp.tb.cpp
+   Compiling relu_res_hls.cpp_pre.cpp.tb.cpp
+   Compiling relu_res2_hls.cpp_pre.cpp.tb.cpp
+   Compiling resblock_hls.cpp_pre.cpp.tb.cpp
+   Compiling resblock2_hls.cpp_pre.cpp.tb.cpp
+   Compiling stem_hls.cpp_pre.cpp.tb.cpp
+   Compiling test_cnn_hls.cpp_pre.cpp.tb.cpp
+   Compiling apatb_cnn_hls_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+========================================
+Running CNN HLS synthetic test
+CNN input size  = 320
+CNN output size = 5120
+========================================
+CNN HLS synthetic PASS
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged writeonly
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+D:\Thesis\workspaces\HLS01\cnn_hls_prj\solution1\sim\verilog>set PATH= 
+
+D:\Thesis\workspaces\HLS01\cnn_hls_prj\solution1\sim\verilog>call D:/AMDDesignTools/2025.2/Vivado/bin/xelab xil_defaultlib.apatb_cnn_hls_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj cnn_hls.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_21 -L floating_point_v7_0_26 --lib "ieee_proposed=./ieee_proposed" -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./cnn_hls_subsystem  -s cnn_hls  
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_cnn_hls_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj cnn_hls.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_21 -L floating_point_v7_0_26 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./cnn_hls_subsystem -s cnn_hls 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_down_b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_down_b
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_down_m.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_down_m
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_down_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_down_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_down_w.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_down_w
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_down_wzp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_down_wzp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_input_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_output_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_output_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res1_b1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res1_b1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res1_b2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res1_b2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res1_m1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res1_m1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res1_m2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res1_m2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res1_s1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res1_s1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res1_s2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res1_s2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res1_w1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res1_w1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res1_w2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res1_w2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res1_wzp1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res1_wzp1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res1_wzp2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res1_wzp2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res2_b1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res2_b1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res2_b2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res2_b2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res2_m1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res2_m1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res2_m2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res2_m2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res2_s1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res2_s1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res2_s2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res2_s2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res2_w1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res2_w1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res2_w2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res2_w2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res2_wzp1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res2_wzp1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_res2_wzp2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_res2_wzp2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_stem_b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_stem_b
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_stem_m.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_stem_m
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_stem_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_stem_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_stem_w.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_stem_w
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/AESL_automem_stem_wzp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_stem_wzp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_cnn_hls_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_am_addmul_7ns_10ns_12ns_23_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_7ns_10ns_12ns_23_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_7ns_10ns_12ns_23_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_am_addmul_7ns_11ns_13ns_25_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_7ns_11ns_13ns_25_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_7ns_11ns_13ns_25_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_am_addmul_7ns_12ns_14ns_27_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_7ns_12ns_14ns_27_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_7ns_12ns_14ns_27_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_am_addmul_7ns_7ns_9ns_17_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_7ns_7ns_9ns_17_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_7ns_7ns_9ns_17_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_am_addmul_7ns_8ns_10ns_19_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_7ns_8ns_10ns_19_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_7ns_8ns_10ns_19_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_am_addmul_7ns_9ns_11ns_21_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_7ns_9ns_11ns_21_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_7ns_9ns_11ns_21_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_am_addmul_8ns_10ns_12ns_23_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_8ns_10ns_12ns_23_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_8ns_10ns_12ns_23_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_am_addmul_8ns_11ns_13ns_25_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_8ns_11ns_13ns_25_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_8ns_11ns_13ns_25_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_am_addmul_8ns_12ns_14ns_27_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_8ns_12ns_14ns_27_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_8ns_12ns_14ns_27_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_am_addmul_8ns_8ns_10ns_19_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_8ns_8ns_10ns_19_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_8ns_8ns_10ns_19_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_am_addmul_8ns_9ns_11ns_21_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_8ns_9ns_11ns_21_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module cnn_hls_am_addmul_8ns_9ns_11ns_21_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_16_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_16_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_19_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_19_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_19_14.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_19_14
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_8_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_8_11.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_8_11
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_8_12.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_8_12
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_8_13.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_8_13
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_8_15.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_cnn_hls_Pipeline_VITIS_LOOP_8_15
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_2_RAbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_cnn_hls_unsigned_char_const_signed_char_const_int_const_int_const_int_co_2_RAbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_conv_out_RAM_1P_BRAM_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_conv_out_RAM_1P_BRAM_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_down_conv1d_hls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_down_conv1d_hls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_mul_10ns_12ns_21_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_mul_10ns_12ns_21_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_mul_11ns_13ns_23_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_mul_11ns_13ns_23_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_mul_12ns_14ns_25_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_mul_12ns_14ns_25_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_mul_13ns_15ns_27_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_mul_13ns_15ns_27_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_mul_32s_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_mul_32s_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_mul_32s_32s_64_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_mul_32s_32s_64_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_mul_64ns_66ns_129_5_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_mul_64ns_66ns_129_5_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_mul_7ns_9ns_15_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_mul_7ns_9ns_15_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_mul_8ns_10ns_17_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_mul_8ns_10ns_17_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_mul_9ns_11ns_19_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_mul_9ns_11ns_19_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_res2_conv1d_hls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_res2_conv1d_hls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_res_conv1d_hls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_res_conv1d_hls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_sparsemux_7_2_8_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_sparsemux_7_2_8_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_stem_conv1d_hls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_stem_conv1d_hls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_urem_7ns_3ns_2_11_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_urem_7ns_3ns_2_11_1_divider
+INFO: [VRFC 10-311] analyzing module cnn_hls_urem_7ns_3ns_2_11_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_urem_8ns_3ns_2_12_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_hls_urem_8ns_3ns_2_12_1_divider
+INFO: [VRFC 10-311] analyzing module cnn_hls_urem_8ns_3ns_2_12_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/svr/svr_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/svr/svr_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/cnn_hls_subsystem/cnn_hls_subsystem_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/svtb/misc_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Thesis/workspaces/HLS01/cnn_hls_prj/solution1/sim/verilog/svtb/sv_module_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv_module_top
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.svr_pkg
+Compiling package xil_defaultlib.file_agent_pkg
+Compiling package xil_defaultlib.cnn_hls_subsystem_pkg
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.cnn_hls_conv_out_RAM_1P_BRAM_1R1...
+Compiling module xil_defaultlib.cnn_hls_cnn_hls_unsigned_char_co...
+Compiling module xil_defaultlib.cnn_hls_flow_control_loop_pipe_s...
+Compiling module xil_defaultlib.cnn_hls_stem_conv1d_hls
+Compiling module xil_defaultlib.cnn_hls_cnn_hls_Pipeline_VITIS_L...
+Compiling module xil_defaultlib.cnn_hls_mul_32s_32s_32_2_1(NUM_S...
+Compiling module xil_defaultlib.cnn_hls_mul_32s_32s_64_2_1(NUM_S...
+Compiling module xil_defaultlib.cnn_hls_mul_64ns_66ns_129_5_1(NU...
+Compiling module xil_defaultlib.cnn_hls_sparsemux_7_2_8_1_1(din0...
+Compiling module xil_defaultlib.cnn_hls_mul_8ns_10ns_17_1_1(NUM_...
+Compiling module xil_defaultlib.cnn_hls_urem_8ns_3ns_2_12_1_divi...
+Compiling module xil_defaultlib.cnn_hls_urem_8ns_3ns_2_12_1(NUM_...
+Compiling module xil_defaultlib.cnn_hls_mul_10ns_12ns_21_1_1(NUM...
+Compiling module xil_defaultlib.cnn_hls_mul_11ns_13ns_23_1_1(NUM...
+Compiling module xil_defaultlib.cnn_hls_mul_12ns_14ns_25_1_1(NUM...
+Compiling module xil_defaultlib.cnn_hls_mul_13ns_15ns_27_1_1(NUM...
+Compiling module xil_defaultlib.cnn_hls_mul_9ns_11ns_19_1_1(NUM_...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_8ns_12ns_14ns_...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_8ns_12ns_14ns_...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_8ns_8ns_10ns_1...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_8ns_8ns_10ns_1...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_8ns_9ns_11ns_2...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_8ns_9ns_11ns_2...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_8ns_10ns_12ns_...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_8ns_10ns_12ns_...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_8ns_11ns_13ns_...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_8ns_11ns_13ns_...
+Compiling module xil_defaultlib.cnn_hls_res_conv1d_hls
+Compiling module xil_defaultlib.cnn_hls_cnn_hls_Pipeline_VITIS_L...
+Compiling module xil_defaultlib.cnn_hls_cnn_hls_Pipeline_VITIS_L...
+Compiling module xil_defaultlib.cnn_hls_cnn_hls_Pipeline_VITIS_L...
+Compiling module xil_defaultlib.cnn_hls_urem_7ns_3ns_2_11_1_divi...
+Compiling module xil_defaultlib.cnn_hls_urem_7ns_3ns_2_11_1(NUM_...
+Compiling module xil_defaultlib.cnn_hls_down_conv1d_hls
+Compiling module xil_defaultlib.cnn_hls_cnn_hls_Pipeline_VITIS_L...
+Compiling module xil_defaultlib.cnn_hls_mul_7ns_9ns_15_1_1(NUM_S...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_7ns_12ns_14ns_...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_7ns_12ns_14ns_...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_7ns_8ns_10ns_1...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_7ns_8ns_10ns_1...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_7ns_10ns_12ns_...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_7ns_10ns_12ns_...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_7ns_11ns_13ns_...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_7ns_11ns_13ns_...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_7ns_7ns_9ns_17...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_7ns_7ns_9ns_17...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_7ns_9ns_11ns_2...
+Compiling module xil_defaultlib.cnn_hls_am_addmul_7ns_9ns_11ns_2...
+Compiling module xil_defaultlib.cnn_hls_res2_conv1d_hls
+Compiling module xil_defaultlib.cnn_hls_cnn_hls_Pipeline_VITIS_L...
+Compiling module xil_defaultlib.cnn_hls_cnn_hls_Pipeline_VITIS_L...
+Compiling module xil_defaultlib.cnn_hls_cnn_hls_Pipeline_VITIS_L...
+Compiling module xil_defaultlib.cnn_hls
+Compiling module xil_defaultlib.misc_interface_default
+Compiling module xil_defaultlib.svr_if_default
+Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.AESL_automem_input_r
+Compiling module xil_defaultlib.AESL_automem_stem_w
+Compiling module xil_defaultlib.AESL_automem_stem_b
+Compiling module xil_defaultlib.AESL_automem_stem_m
+Compiling module xil_defaultlib.AESL_automem_stem_s
+Compiling module xil_defaultlib.AESL_automem_stem_wzp
+Compiling module xil_defaultlib.AESL_automem_res1_w1
+Compiling module xil_defaultlib.AESL_automem_res1_b1
+Compiling module xil_defaultlib.AESL_automem_res1_m1
+Compiling module xil_defaultlib.AESL_automem_res1_s1
+Compiling module xil_defaultlib.AESL_automem_res1_wzp1
+Compiling module xil_defaultlib.AESL_automem_res1_w2
+Compiling module xil_defaultlib.AESL_automem_res1_b2
+Compiling module xil_defaultlib.AESL_automem_res1_m2
+Compiling module xil_defaultlib.AESL_automem_res1_s2
+Compiling module xil_defaultlib.AESL_automem_res1_wzp2
+Compiling module xil_defaultlib.AESL_automem_down_w
+Compiling module xil_defaultlib.AESL_automem_down_b
+Compiling module xil_defaultlib.AESL_automem_down_m
+Compiling module xil_defaultlib.AESL_automem_down_s
+Compiling module xil_defaultlib.AESL_automem_down_wzp
+Compiling module xil_defaultlib.AESL_automem_res2_w1
+Compiling module xil_defaultlib.AESL_automem_res2_b1
+Compiling module xil_defaultlib.AESL_automem_res2_m1
+Compiling module xil_defaultlib.AESL_automem_res2_s1
+Compiling module xil_defaultlib.AESL_automem_res2_wzp1
+Compiling module xil_defaultlib.AESL_automem_res2_w2
+Compiling module xil_defaultlib.AESL_automem_res2_b2
+Compiling module xil_defaultlib.AESL_automem_res2_m2
+Compiling module xil_defaultlib.AESL_automem_res2_s2
+Compiling module xil_defaultlib.AESL_automem_res2_wzp2
+Compiling module xil_defaultlib.AESL_automem_output_r
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=3)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=80)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=160)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_cnn_hls_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cnn_hls
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu May  7 07:26:02 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/cnn_hls/xsim_script.tcl
+# xsim {cnn_hls} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=cnn_hls_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -autoloadwcfg -tclbatch {cnn_hls.tcl}
+Time resolution is 1 ps
+source cnn_hls.tcl
+## run all
+UVM_INFO D:AMDDesignTooÿÿ‚5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO D:AMDDesignTooÿÿ‚5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO D:AMDDesignTooÿÿ‚5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+-----------------------------------------------------------------------------------
+Name                         Type                            Size  Value           
+-----------------------------------------------------------------------------------
+uvm_test_top                 cnn_hls_test_lib                -     @349            
+  top_env                    cnn_hls_env                     -     @360            
+    cnn_hls_virtual_sqr      cnn_hls_virtual_sequencer       -     @444            
+      rsp_export             uvm_analysis_export             -     @453            
+      seq_item_export        uvm_seq_item_pull_imp           -     @571            
+      arbitration_queue      array                           0     -               
+      lock_queue             array                           0     -               
+      num_last_reqs          integral                        32    'd1             
+      num_last_rsps          integral                        32    'd1             
+    env_master_svr_Zx        uvm_env                         -     @379            
+      m_agt                  uvm_agent                       -     @587            
+        drv                  uvm_driver #(REQ,RSP)           -     @735            
+          rsp_port           uvm_analysis_port               -     @754            
+          seq_item_port      uvm_seq_item_pull_port          -     @744            
+        mon                  uvm_monitor                     -     @764            
+          item_collect_port  uvm_analysis_port               -     @775            
+        sqr                  uvm_sequencer                   -     @598            
+          rsp_export         uvm_analysis_export             -     @607            
+          seq_item_export    uvm_seq_item_pull_imp           -     @725            
+          arbitration_queue  array                           0     -               
+          lock_queue         array                           0     -               
+          num_last_reqs      integral                        32    'd1             
+          num_last_rsps      integral                        32    'd1             
+    env_master_svr_Zy        uvm_env                         -     @392            
+      m_agt                  uvm_agent                       -     @793            
+        drv                  uvm_driver #(REQ,RSP)           -     @941            
+          rsp_port           uvm_analysis_port               -     @960            
+          seq_item_port      uvm_seq_item_pull_port          -     @950            
+        mon                  uvm_monitor                     -     @970            
+          item_collect_port  uvm_analysis_port               -     @981            
+        sqr                  uvm_sequencer                   -     @804            
+          rsp_export         uvm_analysis_export             -     @813            
+          seq_item_export    uvm_seq_item_pull_imp           -     @931            
+          arbitration_queue  array                           0     -               
+          lock_queue         array                           0     -               
+          num_last_reqs      integral                        32    'd1             
+          num_last_rsps      integral                        32    'd1             
+    refm                     cnn_hls_reference_model         -     @402            
+      trans_num_idx          integral                        32    'h0             
+    subsys_mon               cnn_hls_subsystem_monitor       -     @415            
+      scbd                   cnn_hls_scoreboard              -     @1003           
+        refm                 cnn_hls_reference_model         -     @402            
+          trans_num_idx      integral                        32    'h0             
+      svr_master_Zx_imp      uvm_analysis_imp_svr_master_Zx  -     @424            
+      svr_master_Zy_imp      uvm_analysis_imp_svr_master_Zy  -     @434            
+    env_master_svr_Zx        uvm_env                         -     @379            
+    env_master_svr_Zy        uvm_env                         -     @392            
+    refm                     cnn_hls_reference_model         -     @402            
+    cnn_hls_virtual_sqr      cnn_hls_virtual_sequencer       -     @444            
+    cnn_hls_cfg              cnn_hls_config                  -     @374            
+      port_Zx_cfg            svr_config                      -     @375            
+        svr_type             svr_inst_type                   32    SVR_MASTER      
+        prt_type             svr_protocol_type               32    AP_NONE         
+        is_active            svr_active_passive_enum         1     SVR_ACTIVE      
+        reset_level          svr_reset_level_enum            1     RESET_LEVEL_HIGH
+        spec_cfg             svr_spec_cfg_enum               32    NORMAL          
+        clatency             svr_latency                     -     @376            
+          transfer_latency   integral                        32    'h0             
+      port_Zy_cfg            svr_config                      -     @377            
+        svr_type             svr_inst_type                   32    SVR_MASTER      
+        prt_type             svr_protocol_type               32    AP_NONE         
+        is_active            svr_active_passive_enum         1     SVR_ACTIVE      
+        reset_level          svr_reset_level_enum            1     RESET_LEVEL_HIGH
+        spec_cfg             svr_spec_cfg_enum               32    NORMAL          
+        clatency             svr_latency                     -     @378            
+          transfer_latency   integral                        32    'h0             
+      check_ena              integral                        32    'h0             
+      cover_ena              integral                        32    'h0             
+-----------------------------------------------------------------------------------
+
+UVM_INFO D:AMDDesignTooÿÿ‚5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "29238305000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 29238375 ns : File "D:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:11:52 . Memory (MB): peak = 239.672 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 49988 KB (Peak: 49988 KB), Simulation CPU Usage: 603812 ms
+INFO: [Common 17-206] Exiting xsim at Thu May  7 07:37:59 2026...
+INFO: [COSIM 212-316] Starting C post checking ...
+========================================
+Running CNN HLS synthetic test
+CNN input size  = 320
+CNN output size = 5120
+========================================
+CNN HLS synthetic PASS
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-2161] Finished Command cosim_design Elapsed time: 00:14:52; Allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 204 seconds. Total CPU system time: 9 seconds. Total elapsed time: 1313.87 seconds; peak allocated memory: 627.648 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 21m 58s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
