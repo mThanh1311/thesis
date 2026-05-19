@@ -146,3 +146,56 @@ Current focus:
 - Vitis HLS / Vivado flow
 
 ---
+
+## Current Progress Checklist
+
+### HLS IP Export
+
+- [x] Create Vitis HLS project for `cnn_common_hls`
+- [x] Run g++ C simulation
+- [x] Run Vitis HLS CSIM
+- [x] Run Vitis HLS CSYNTH
+- [x] Export `cnn_common_hls` as Vivado IP
+- [x] Generate `component.xml`
+- [x] Generate HLS software driver
+- [x] Confirm driver APIs:
+  - `XCnn_common_hls_Start()`
+  - `XCnn_common_hls_IsDone()`
+  - `XCnn_common_hls_Set_input_r()`
+  - `XCnn_common_hls_Set_output_r()`
+
+---
+
+### Vivado Block Design Integration
+
+- [x] Create Vivado project for **Arty A7-100T**
+- [x] Add HLS IP repository
+- [x] Add `cnn_common_hls` IP into block design
+- [x] Add **MicroBlaze** soft CPU system
+- [x] Add **AXI UARTLite**
+- [x] Add **AXI BRAM Controller**
+- [x] Add **Block Memory Generator**
+- [x] Connect `s_axi_control` to MicroBlaze AXI bus
+- [x] Connect `m_axi_gmem` to shared AXI BRAM
+- [x] Assign address map for CPU and CNN IP
+- [x] Validate block design successfully
+- [x] Generate output products
+- [x] Create HDL wrapper
+- [x] Change clock input from differential to single-ended
+
+---
+
+### Current Stop Point
+
+- [ ] Create XDC constraints for **Arty A7-100T**
+
+---
+
+### Next Steps
+
+- [ ] Run synthesis
+- [ ] Run implementation
+- [ ] Generate bitstream
+- [ ] Export XSA
+- [ ] Create Vitis embedded software application
+- [ ] Run board-level sample0 test through UART
